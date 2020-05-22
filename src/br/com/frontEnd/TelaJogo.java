@@ -91,6 +91,18 @@ public class TelaJogo extends JFrame {
 		JLabel rodape = new JLabel("Desenvolvido por: Andr\u00E9 d'Lima / Pedro HSP");
 		rodape.setFont(new Font("Times New Roman", Font.BOLD, 12));
 		
+		JTextArea textArea_Alternativa1 = new JTextArea();
+		textArea_Alternativa1.setBackground(new Color(204, 255, 255));
+		
+		JTextArea textArea_Alternativa2 = new JTextArea();
+		textArea_Alternativa2.setBackground(new Color(204, 255, 255));
+		
+		JTextArea textArea_Alternativa3 = new JTextArea();
+		textArea_Alternativa3.setBackground(new Color(204, 255, 255));
+		
+		JTextArea textArea_Alternativa4 = new JTextArea();
+		textArea_Alternativa4.setBackground(new Color(204, 255, 255));
+		
 		GroupLayout groupLayout = new GroupLayout(getContentPane());
 		groupLayout.setHorizontalGroup(
 			groupLayout.createParallelGroup(Alignment.LEADING)
@@ -113,7 +125,13 @@ public class TelaJogo extends JFrame {
 						.addComponent(alternativa4, Alignment.LEADING, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
 						.addComponent(alternativa3, Alignment.LEADING, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
 						.addComponent(alternativa2, Alignment.LEADING, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-					.addContainerGap(407, Short.MAX_VALUE))
+					.addPreferredGap(ComponentPlacement.RELATED)
+					.addGroup(groupLayout.createParallelGroup(Alignment.LEADING)
+						.addComponent(textArea_Alternativa1, GroupLayout.PREFERRED_SIZE, 382, GroupLayout.PREFERRED_SIZE)
+						.addComponent(textArea_Alternativa2, GroupLayout.PREFERRED_SIZE, 382, GroupLayout.PREFERRED_SIZE)
+						.addComponent(textArea_Alternativa3, GroupLayout.PREFERRED_SIZE, 382, GroupLayout.PREFERRED_SIZE)
+						.addComponent(textArea_Alternativa4, GroupLayout.PREFERRED_SIZE, 382, GroupLayout.PREFERRED_SIZE))
+					.addContainerGap(23, Short.MAX_VALUE))
 				.addGroup(groupLayout.createSequentialGroup()
 					.addContainerGap()
 					.addComponent(textArea, GroupLayout.DEFAULT_SIZE, 414, Short.MAX_VALUE)
@@ -127,13 +145,21 @@ public class TelaJogo extends JFrame {
 					.addPreferredGap(ComponentPlacement.RELATED)
 					.addComponent(textArea, GroupLayout.PREFERRED_SIZE, 122, GroupLayout.PREFERRED_SIZE)
 					.addPreferredGap(ComponentPlacement.UNRELATED)
-					.addComponent(alternativa2, GroupLayout.PREFERRED_SIZE, 33, GroupLayout.PREFERRED_SIZE)
+					.addGroup(groupLayout.createParallelGroup(Alignment.TRAILING)
+						.addComponent(alternativa2, GroupLayout.PREFERRED_SIZE, 33, GroupLayout.PREFERRED_SIZE)
+						.addComponent(textArea_Alternativa1, GroupLayout.PREFERRED_SIZE, 29, GroupLayout.PREFERRED_SIZE))
 					.addPreferredGap(ComponentPlacement.RELATED)
-					.addComponent(alternativa3, GroupLayout.PREFERRED_SIZE, 33, GroupLayout.PREFERRED_SIZE)
+					.addGroup(groupLayout.createParallelGroup(Alignment.LEADING)
+						.addComponent(alternativa3, GroupLayout.PREFERRED_SIZE, 33, GroupLayout.PREFERRED_SIZE)
+						.addComponent(textArea_Alternativa2, GroupLayout.PREFERRED_SIZE, 29, GroupLayout.PREFERRED_SIZE))
 					.addPreferredGap(ComponentPlacement.RELATED)
-					.addComponent(alternativa4, GroupLayout.PREFERRED_SIZE, 33, GroupLayout.PREFERRED_SIZE)
+					.addGroup(groupLayout.createParallelGroup(Alignment.LEADING)
+						.addComponent(alternativa4, GroupLayout.PREFERRED_SIZE, 33, GroupLayout.PREFERRED_SIZE)
+						.addComponent(textArea_Alternativa3, GroupLayout.PREFERRED_SIZE, 29, GroupLayout.PREFERRED_SIZE))
 					.addPreferredGap(ComponentPlacement.RELATED)
-					.addComponent(alternativa1, GroupLayout.PREFERRED_SIZE, 33, GroupLayout.PREFERRED_SIZE)
+					.addGroup(groupLayout.createParallelGroup(Alignment.LEADING)
+						.addComponent(textArea_Alternativa4, GroupLayout.PREFERRED_SIZE, 29, GroupLayout.PREFERRED_SIZE)
+						.addComponent(alternativa1, GroupLayout.PREFERRED_SIZE, 33, GroupLayout.PREFERRED_SIZE))
 					.addGap(34)
 					.addComponent(btnNewButton)
 					.addGap(44)
