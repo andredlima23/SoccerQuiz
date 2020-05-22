@@ -48,10 +48,10 @@ public class MatrixQuestion {
 		tabela[7][2] = "Felipão";
 		tabela[7][3] = "Dunga";
 		tabela[7][4] = "Parreira";
-//		tabela[8][0] =
-//		tabela[8][1] =
-//		tabela[8][2] =
-//		tabela[8][3] =
-//		tabela[8][4] =
+		tabela[8][0] = "Como se chama o principal torneio nacional de clubes do Brasil?";
+		tabela[8][1] = "Brasileirão Série A";
+		tabela[8][2] = "Copa do Brasil";
+		tabela[8][3] = "Campeonato Pernambucano";
+		tabela[8][4] = "Copa dos Campeões";
 	}
 }
