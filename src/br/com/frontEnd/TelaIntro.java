@@ -1,4 +1,4 @@
-package view;
+package br.com.frontEnd;
 
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
