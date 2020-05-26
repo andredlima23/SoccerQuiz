@@ -54,7 +54,7 @@ public class TelaJogo extends JFrame {
 		setBounds(100, 100, 450, 500);
 
 		JLabel cabecalho = new JLabel("SoccerQuiz");
-		cabecalho.setBounds(129, 11, 184, 71);
+		cabecalho.setBounds(126, 5, 184, 46);
 		cabecalho.setHorizontalAlignment(SwingConstants.CENTER);
 		cabecalho.setFont(new Font("Showcard Gothic", Font.PLAIN, 30));
 

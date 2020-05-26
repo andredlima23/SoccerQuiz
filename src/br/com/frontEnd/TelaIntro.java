@@ -51,10 +51,6 @@ public class TelaIntro extends JFrame {
 		cabeçalho.setBounds(126, 5, 184, 46);
 		cabeçalho.setFont(new Font("Showcard Gothic", Font.PLAIN, 30));
 
-		JLabel lblNewLabel = new JLabel(new ImageIcon(getClass().getResource("bola.png")));
-		lblNewLabel.setBounds(5, 57, 424, 344);
-		lblNewLabel.setBackground(new Color(204, 255, 255));
-
 		JButton btnIniciar = new JButton("Iniciar");
 		btnIniciar.setBounds(298, 416, 103, 29);
 		btnIniciar.setFont(new Font("Times New Roman", Font.BOLD, 14));
@@ -79,35 +75,16 @@ public class TelaIntro extends JFrame {
 		});
 		btnRegras.setFont(new Font("Times New Roman", Font.BOLD, 14));
 		contentPane.setLayout(null);
-
-		GroupLayout gl_contentPane = new GroupLayout(contentPane);
-		gl_contentPane.setHorizontalGroup(
-			gl_contentPane.createParallelGroup(Alignment.TRAILING)
-				.addGroup(gl_contentPane.createSequentialGroup()
-					.addGap(121)
-					.addComponent(cabeçalho, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-					.addGap(119))
-				.addGroup(gl_contentPane.createSequentialGroup()
-					.addGap(31)
-					.addComponent(btnRegras, GroupLayout.PREFERRED_SIZE, 103, GroupLayout.PREFERRED_SIZE)
-					.addPreferredGap(ComponentPlacement.RELATED, 159, Short.MAX_VALUE)
-					.addComponent(btnIniciar, GroupLayout.PREFERRED_SIZE, 103, GroupLayout.PREFERRED_SIZE)
-					.addGap(28))
-				.addComponent(lblNewLabel, GroupLayout.PREFERRED_SIZE, 424, Short.MAX_VALUE)
-		);
-		gl_contentPane.setVerticalGroup(
-			gl_contentPane.createParallelGroup(Alignment.TRAILING)
-				.addGroup(gl_contentPane.createSequentialGroup()
-					.addComponent(cabeçalho, GroupLayout.DEFAULT_SIZE, 46, Short.MAX_VALUE)
-					.addPreferredGap(ComponentPlacement.RELATED)
-					.addComponent(lblNewLabel, GroupLayout.PREFERRED_SIZE, 344, GroupLayout.PREFERRED_SIZE)
-					.addGap(15)
-					.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
-						.addComponent(btnIniciar, GroupLayout.PREFERRED_SIZE, 29, GroupLayout.PREFERRED_SIZE)
-						.addComponent(btnRegras, GroupLayout.PREFERRED_SIZE, 29, GroupLayout.PREFERRED_SIZE))
-					.addContainerGap())
-		);
-		contentPane.setLayout(gl_contentPane);
+		contentPane.setLayout(null);
+		
+		JLabel lblNewLabel = new JLabel("");
+		lblNewLabel.setIcon(new ImageIcon(TelaIntro.class.getResource("/br/com/frontEnd/images/logo.jpg")));
+		lblNewLabel.setLocation(40, 44);
+		lblNewLabel.setSize(350, 350);
+		contentPane.add(lblNewLabel);
+		contentPane.add(cabeçalho);
+		contentPane.add(btnRegras);
+		contentPane.add(btnIniciar);
 	}
 
 }
