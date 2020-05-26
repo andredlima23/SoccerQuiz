@@ -40,9 +40,7 @@ public class Algoritmos {
 				result = i;
 			}
 		}
-
 		return result;
-
 	}
 
 }

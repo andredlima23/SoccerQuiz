@@ -32,6 +32,7 @@ public class TelaJogo extends JFrame {
 					TelaJogo frame = new TelaJogo();
 					frame.setVisible(true);
 					MatrixQuestion.preencherTabela();
+					
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -105,10 +106,8 @@ public class TelaJogo extends JFrame {
 					
 				
 			}
-		});
 
-		JLabel rodape = new JLabel("Desenvolvido por: Andr\u00E9 d'Lima / Pedro HSP");
-		rodape.setFont(new Font("Times New Roman", Font.BOLD, 12));
+		});
 		
 		GroupLayout groupLayout = new GroupLayout(getContentPane());
 		groupLayout.setHorizontalGroup(
@@ -117,10 +116,6 @@ public class TelaJogo extends JFrame {
 					.addGap(129)
 					.addComponent(cabecalho, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
 					.addGap(121))
-				.addGroup(groupLayout.createSequentialGroup()
-					.addContainerGap(189, Short.MAX_VALUE)
-					.addComponent(rodape)
-					.addContainerGap())
 				.addGroup(groupLayout.createSequentialGroup()
 					.addGap(153)
 					.addComponent(btnNewButton)
@@ -141,7 +136,7 @@ public class TelaJogo extends JFrame {
 								.addComponent(opcao3, GroupLayout.PREFERRED_SIZE, 371, GroupLayout.PREFERRED_SIZE)
 								.addComponent(opcao4, GroupLayout.PREFERRED_SIZE, 371, GroupLayout.PREFERRED_SIZE)
 								.addComponent(opcao1, GroupLayout.PREFERRED_SIZE, 374, GroupLayout.PREFERRED_SIZE))))
-					.addContainerGap(24, Short.MAX_VALUE))
+					.addContainerGap(20, Short.MAX_VALUE))
 		);
 		groupLayout.setVerticalGroup(
 			groupLayout.createParallelGroup(Alignment.TRAILING)
@@ -151,7 +146,7 @@ public class TelaJogo extends JFrame {
 					.addPreferredGap(ComponentPlacement.RELATED)
 					.addComponent(textArea, GroupLayout.PREFERRED_SIZE, 122, GroupLayout.PREFERRED_SIZE)
 					.addGap(18)
-					.addGroup(groupLayout.createParallelGroup(Alignment.LEADING)
+					.addGroup(groupLayout.createParallelGroup(Alignment.TRAILING)
 						.addComponent(alternativa2, GroupLayout.PREFERRED_SIZE, 33, GroupLayout.PREFERRED_SIZE)
 						.addComponent(opcao1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
 					.addGap(3)
@@ -174,9 +169,7 @@ public class TelaJogo extends JFrame {
 							.addComponent(opcao4, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)))
 					.addGap(34)
 					.addComponent(btnNewButton)
-					.addGap(44)
-					.addComponent(rodape)
-					.addContainerGap())
+					.addGap(70))
 		);
 		getContentPane().setLayout(groupLayout);
 	}
