@@ -19,6 +19,8 @@ import javax.swing.border.EmptyBorder;
 
 import br.com.database.MatrixQuestion;
 
+import java.awt.Color;
+
 public class TelaIntro extends JFrame {
 
 	private JPanel contentPane;
@@ -31,6 +33,7 @@ public class TelaIntro extends JFrame {
 					TelaIntro frame = new TelaIntro();
 					frame.setVisible(true);
 					MatrixQuestion.preencherTabela();
+					
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -42,28 +45,31 @@ public class TelaIntro extends JFrame {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 500);
 		contentPane = new JPanel();
+		contentPane.setBackground(new Color(204, 255, 255));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
-		contentPane.setLayout(new BorderLayout(0, 0));
 		setContentPane(contentPane);
 
 		JLabel cabeçalho = new JLabel("SoccerQuiz");
+		cabeçalho.setBounds(126, 5, 184, 46);
 		cabeçalho.setFont(new Font("Showcard Gothic", Font.PLAIN, 30));
 
 		JLabel lblNewLabel = new JLabel(new ImageIcon(getClass().getResource("bola.png")));
+		lblNewLabel.setBounds(5, 57, 424, 344);
+		lblNewLabel.setBackground(new Color(204, 255, 255));
 
 		JButton btnIniciar = new JButton("Iniciar");
+		btnIniciar.setBounds(298, 416, 103, 29);
 		btnIniciar.setFont(new Font("Times New Roman", Font.BOLD, 14));
 		btnIniciar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				TelaJogo telaJogo = new TelaJogo();
 				telaJogo.setVisible(true);
-				
 				setVisible(false);
-
 			}
 		});
 		
 		JButton btnRegras = new JButton("Regras");
+		btnRegras.setBounds(36, 416, 103, 29);
 		btnRegras.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				TelaRegras TelaRegras = new TelaRegras();
@@ -72,6 +78,7 @@ public class TelaIntro extends JFrame {
 			}
 		});
 		btnRegras.setFont(new Font("Times New Roman", Font.BOLD, 14));
+		contentPane.setLayout(null);
 
 		GroupLayout gl_contentPane = new GroupLayout(contentPane);
 		gl_contentPane.setHorizontalGroup(

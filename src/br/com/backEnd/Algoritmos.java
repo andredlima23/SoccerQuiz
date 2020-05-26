@@ -3,6 +3,7 @@ package br.com.backEnd;
 import java.util.ArrayList;
 
 import javax.swing.JRadioButton;
+import javax.swing.JTextArea;
 
 import br.com.database.MatrixQuestion;
 
@@ -57,6 +58,26 @@ public class Algoritmos {
 			result = 3;
 
 		return result;
+	}
+	
+	public static int atualizarQuestao(Question  question, JTextArea textArea, JTextArea opcao1, JTextArea opcao2, JTextArea opcao3, JTextArea opcao4) {
+		
+		question = Algoritmos.sortearQuestion(1, 8);
+		
+		String respostaCorreta = question.getRespostas().get(0);
+		
+		question.setRespostas(Algoritmos.embaralharRespostas(question.getRespostas()));
+		
+		int posicaoRespostaCorreta = Algoritmos.getPosicaoRespostaCorreta(question.getRespostas(), respostaCorreta);
+		
+		textArea.setText(question.getPergunta());
+		opcao1.setText(question.getRespostas().get(0));
+		opcao2.setText(question.getRespostas().get(1));
+		opcao3.setText(question.getRespostas().get(2));
+		opcao4.setText(question.getRespostas().get(3));
+		
+		
+		return posicaoRespostaCorreta;
 	}
 
 }
