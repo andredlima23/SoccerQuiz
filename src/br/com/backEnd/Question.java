@@ -1,14 +1,14 @@
 package br.com.backEnd;
 
-import br.com.database.MatrixQuestion;
+import java.util.ArrayList;
 
 public class Question {
 
 	private String pergunta;
-	private String[] respostas;
+	private ArrayList<String> respostas;
 
 	public Question() {
-
+		this.respostas = new ArrayList<String>();
 	}
 
 	public String getPergunta() {
@@ -19,24 +19,12 @@ public class Question {
 		this.pergunta = pergunta;
 	}
 
-	public String[] getRespostas() {
+	public ArrayList<String> getRespostas() {
 		return respostas;
 	}
 
-	public void setRespostas(String[] respostas) {
+	public void setRespostas(ArrayList<String> respostas) {
 		this.respostas = respostas;
 	}
 
-	public Question sortear(double x, double y) {
-		
-		Question question = new Question();
-		int linha = (int) (x + Math.random() * y);
-		this.pergunta = MatrixQuestion.getTabela()[linha][0];
-		this.respostas[0] = MatrixQuestion.getTabela()[linha][1];
-		this.respostas[1] = MatrixQuestion.getTabela()[linha][2];
-		this.respostas[2] = MatrixQuestion.getTabela()[linha][3];
-		this.respostas[3] = MatrixQuestion.getTabela()[linha][4];
-		
-		return question;
-	}
 }

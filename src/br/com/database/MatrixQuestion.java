@@ -3,8 +3,8 @@ package br.com.database;
 public class MatrixQuestion {
 	private static String tabela[][] = new String[30][5];
 
-	public static String[][] getTabela() {
-		return tabela;
+	public static String buscaPerguntaEresposta(int linha, int coluna) {
+		return tabela[linha][coluna];
 	}
 
 	public static void preencherTabela() {
