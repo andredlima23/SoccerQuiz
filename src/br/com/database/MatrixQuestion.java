@@ -6,8 +6,9 @@ public class MatrixQuestion {
 	public static String[][] getTabela() {
 		return tabela;
 	}
-	
+
 	public static void preencherTabela() {
+		//Início nível fácil
 		tabela[0][0] = "Qual a única seleção cinco vezes campeã da copa do mundo da FIFA?";
 		tabela[0][1] = "Brasil";
 		tabela[0][2] = "Alemanha";
@@ -53,5 +54,22 @@ public class MatrixQuestion {
 		tabela[8][2] = "Copa do Brasil";
 		tabela[8][3] = "Campeonato Pernambucano";
 		tabela[8][4] = "Copa dos Campeões";
+		//Fim nível fácil
+		//Início nível médio
+		tabela[9][0] = "Quem o capitão da seleção brasileira na copa do mundo FIFA de 2002?";
+		tabela[9][1] = "Cafú";
+		tabela[9][2] = "Ronaldo";
+		tabela[9][3] = "Rivaldo";
+		tabela[9][4] = "Lúcio";
+		tabela[10][0] = "Qual é o mascote da seleção brasileira de futebol?";
+		tabela[10][1] = "Canarinho";
+		tabela[10][2] = "Fuleco";
+		tabela[10][3] = "Zé Carioca";
+		tabela[10][4] = "Louro José";
+		tabela[11][0] = "Em quais anos o Brasil cediou a copa do mundo da FIFA?";
+		tabela[11][1] = "1950 e 2014";
+		tabela[11][2] = "1956 e 2016";
+		tabela[11][3] = "1950 e 2018";
+		tabela[11][4] = "1970 e 2014";
 	}
 }

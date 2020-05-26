@@ -3,6 +3,8 @@ package br.com.frontEnd;
 import java.awt.Color;
 import java.awt.EventQueue;
 import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import javax.swing.GroupLayout;
 import javax.swing.GroupLayout.Alignment;
@@ -23,12 +25,14 @@ public class TelaIntro extends JFrame {
 	/**
 	 * Launch the application.
 	 */
+	
 	public static void main(String[] args) {
+		
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					TelaIntro frame = new TelaIntro();
-					frame.setVisible(true);
+					TelaIntro telaIntro = new TelaIntro();
+					telaIntro.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -54,6 +58,14 @@ public class TelaIntro extends JFrame {
 		
 		JButton btnNewButton = new JButton("Come\u00E7ar");
 		btnNewButton.setFont(new Font("Times New Roman", Font.BOLD, 14));
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				TelaJogo telaJogo = new TelaJogo();
+				telaJogo.setVisible(true);
+				setVisible(false);
+						
+			}
+		});
 		
 		GroupLayout gl_contentPane = new GroupLayout(contentPane);
 		gl_contentPane.setHorizontalGroup(
