@@ -12,6 +12,8 @@ import javax.swing.GroupLayout.Alignment;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
 import javax.swing.JRadioButton;
 import javax.swing.JTextArea;
 import javax.swing.LayoutStyle.ComponentPlacement;
@@ -25,20 +27,18 @@ public class TelaJogo extends JFrame {
 
 	JTextArea textArea = new JTextArea();
 
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					TelaJogo frame = new TelaJogo();
-					frame.setVisible(true);
-					MatrixQuestion.preencherTabela();
-					
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
+//	public static void main(String[] args) {
+//		EventQueue.invokeLater(new Runnable() {
+//			public void run() {
+//				try {
+//					TelaJogo frame = new TelaJogo();
+//					frame.setVisible(true);
+//				} catch (Exception e) {
+//					e.printStackTrace();
+//				}
+//			}
+//		});
+//	}
 
 	public TelaJogo() {
 		textArea.setBackground(new Color(204, 255, 255));
@@ -103,6 +103,9 @@ public class TelaJogo extends JFrame {
 				opcao2.setText(question.getRespostas().get(1));
 				opcao3.setText(question.getRespostas().get(2));
 				opcao4.setText(question.getRespostas().get(3));
+				
+				if(Algoritmos.verificarResposta(alternativa1, alternativa2, alternativa3, alternativa4) == posicaoRespostaCorreta)
+					JOptionPane.showConfirmDialog(null, "miserave");
 					
 				
 			}

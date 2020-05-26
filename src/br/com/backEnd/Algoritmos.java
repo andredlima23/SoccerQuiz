@@ -2,6 +2,8 @@ package br.com.backEnd;
 
 import java.util.ArrayList;
 
+import javax.swing.JRadioButton;
+
 import br.com.database.MatrixQuestion;
 
 public class Algoritmos {
@@ -35,11 +37,25 @@ public class Algoritmos {
 
 		Integer result = null;
 
-		for (int i = 0; i < listaEntrada.size(); i++) {
-			if (listaEntrada.get(i).equals(respostaCorreta)) {
+		for (int i = 0; i < listaEntrada.size(); i++)
+			if (listaEntrada.get(i).equals(respostaCorreta))
 				result = i;
-			}
-		}
+
+		return result;
+	}
+
+	public static int verificarResposta(JRadioButton r1, JRadioButton r2, JRadioButton r3, JRadioButton r4) {
+		Integer result = null;
+
+		if (r1.isSelected())
+			result = 0;
+		else if (r2.isSelected())
+			result = 1;
+		else if (r3.isSelected())
+			result = 2;
+		else if (r4.isSelected())
+			result = 3;
+
 		return result;
 	}
 
