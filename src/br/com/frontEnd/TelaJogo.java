@@ -41,32 +41,40 @@ public class TelaJogo extends JFrame {
 	}
 
 	public TelaJogo() {
+		textArea.setWrapStyleWord(true);
+		textArea.setLineWrap(true);
+		textArea.setToolTipText("");
+		textArea.setBounds(30, 80, 375, 125);
 		textArea.setBackground(new Color(204, 255, 255));
 		textArea.setFont(new Font("Times New Roman", Font.BOLD, 30));
 		textArea.setEditable(false);
-		textArea.setLineWrap(true);
 
 		getContentPane().setBackground(new Color(204, 255, 255));
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 500);
 
 		JLabel cabecalho = new JLabel("SoccerQuiz");
+		cabecalho.setBounds(129, 11, 184, 71);
 		cabecalho.setHorizontalAlignment(SwingConstants.CENTER);
 		cabecalho.setFont(new Font("Showcard Gothic", Font.PLAIN, 30));
 
 		JRadioButton alternativa1 = new JRadioButton();
+		alternativa1.setBounds(10, 343, 21, 21);
 		alternativa1.setFont(new Font("Times New Roman", Font.BOLD, 20));
 		alternativa1.setBackground(new Color(204, 255, 255));
 
 		JRadioButton alternativa2 = new JRadioButton();
+		alternativa2.setBounds(10, 235, 21, 21);
 		alternativa2.setBackground(new Color(204, 255, 255));
 		alternativa2.setFont(new Font("Times New Roman", Font.BOLD, 20));
 
 		JRadioButton alternativa3 = new JRadioButton();
+		alternativa3.setBounds(10, 271, 21, 21);
 		alternativa3.setBackground(new Color(204, 255, 255));
 		alternativa3.setFont(new Font("Times New Roman", Font.BOLD, 20));
 
 		JRadioButton alternativa4 = new JRadioButton();
+		alternativa4.setBounds(10, 307, 21, 21);
 		alternativa4.setBackground(new Color(204, 255, 255));
 		alternativa4.setFont(new Font("Times New Roman", Font.BOLD, 20));
 
@@ -77,15 +85,28 @@ public class TelaJogo extends JFrame {
 		buttonGroup.add(alternativa4);
 
 		JTextArea opcao1 = new JTextArea();
+		opcao1.setEditable(false);
+		opcao1.setFont(new Font("Times New Roman", Font.BOLD, 16));
+		opcao1.setBounds(33, 235, 375, 22);
 		opcao1.setBackground(new Color(204, 255, 255));
 		JTextArea opcao2 = new JTextArea();
+		opcao2.setEditable(false);
+		opcao2.setFont(new Font("Times New Roman", Font.BOLD, 16));
+		opcao2.setBounds(33, 271, 375, 22);
 		opcao2.setBackground(new Color(204, 255, 255));
 		JTextArea opcao3 = new JTextArea();
+		opcao3.setEditable(false);
+		opcao3.setFont(new Font("Times New Roman", Font.BOLD, 16));
+		opcao3.setBounds(33, 307, 375, 22);
 		opcao3.setBackground(new Color(204, 255, 255));
 		JTextArea opcao4 = new JTextArea();
+		opcao4.setEditable(false);
+		opcao4.setFont(new Font("Times New Roman", Font.BOLD, 16));
+		opcao4.setBounds(33, 343, 375, 22);
 		opcao4.setBackground(new Color(204, 255, 255));
 		
 		JButton btnNewButton = new JButton("Responder");
+		btnNewButton.setBounds(153, 395, 150, 30);
 		btnNewButton.setFont(new Font("Times New Roman", Font.BOLD, 18));
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -108,69 +129,17 @@ public class TelaJogo extends JFrame {
 			}
 
 		});
-		
-		GroupLayout groupLayout = new GroupLayout(getContentPane());
-		groupLayout.setHorizontalGroup(
-			groupLayout.createParallelGroup(Alignment.LEADING)
-				.addGroup(groupLayout.createSequentialGroup()
-					.addGap(129)
-					.addComponent(cabecalho, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-					.addGap(121))
-				.addGroup(groupLayout.createSequentialGroup()
-					.addGap(153)
-					.addComponent(btnNewButton)
-					.addContainerGap(166, Short.MAX_VALUE))
-				.addGroup(groupLayout.createSequentialGroup()
-					.addContainerGap()
-					.addGroup(groupLayout.createParallelGroup(Alignment.TRAILING, false)
-						.addComponent(textArea, Alignment.LEADING)
-						.addGroup(Alignment.LEADING, groupLayout.createSequentialGroup()
-							.addGroup(groupLayout.createParallelGroup(Alignment.TRAILING, false)
-								.addComponent(alternativa1, Alignment.LEADING, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-								.addComponent(alternativa4, Alignment.LEADING, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-								.addComponent(alternativa3, Alignment.LEADING, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-								.addComponent(alternativa2, Alignment.LEADING, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-							.addPreferredGap(ComponentPlacement.RELATED)
-							.addGroup(groupLayout.createParallelGroup(Alignment.LEADING)
-								.addComponent(opcao2, GroupLayout.PREFERRED_SIZE, 372, GroupLayout.PREFERRED_SIZE)
-								.addComponent(opcao3, GroupLayout.PREFERRED_SIZE, 371, GroupLayout.PREFERRED_SIZE)
-								.addComponent(opcao4, GroupLayout.PREFERRED_SIZE, 371, GroupLayout.PREFERRED_SIZE)
-								.addComponent(opcao1, GroupLayout.PREFERRED_SIZE, 374, GroupLayout.PREFERRED_SIZE))))
-					.addContainerGap(20, Short.MAX_VALUE))
-		);
-		groupLayout.setVerticalGroup(
-			groupLayout.createParallelGroup(Alignment.TRAILING)
-				.addGroup(groupLayout.createSequentialGroup()
-					.addContainerGap()
-					.addComponent(cabecalho, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-					.addPreferredGap(ComponentPlacement.RELATED)
-					.addComponent(textArea, GroupLayout.PREFERRED_SIZE, 122, GroupLayout.PREFERRED_SIZE)
-					.addGap(18)
-					.addGroup(groupLayout.createParallelGroup(Alignment.TRAILING)
-						.addComponent(alternativa2, GroupLayout.PREFERRED_SIZE, 33, GroupLayout.PREFERRED_SIZE)
-						.addComponent(opcao1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
-					.addGap(3)
-					.addGroup(groupLayout.createParallelGroup(Alignment.LEADING)
-						.addComponent(alternativa3, GroupLayout.PREFERRED_SIZE, 33, GroupLayout.PREFERRED_SIZE)
-						.addGroup(groupLayout.createSequentialGroup()
-							.addGap(7)
-							.addComponent(opcao2, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)))
-					.addPreferredGap(ComponentPlacement.RELATED)
-					.addGroup(groupLayout.createParallelGroup(Alignment.LEADING)
-						.addComponent(alternativa4, GroupLayout.PREFERRED_SIZE, 33, GroupLayout.PREFERRED_SIZE)
-						.addGroup(groupLayout.createSequentialGroup()
-							.addGap(7)
-							.addComponent(opcao3, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)))
-					.addPreferredGap(ComponentPlacement.RELATED)
-					.addGroup(groupLayout.createParallelGroup(Alignment.LEADING)
-						.addComponent(alternativa1, GroupLayout.PREFERRED_SIZE, 33, GroupLayout.PREFERRED_SIZE)
-						.addGroup(groupLayout.createSequentialGroup()
-							.addGap(7)
-							.addComponent(opcao4, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)))
-					.addGap(34)
-					.addComponent(btnNewButton)
-					.addGap(70))
-		);
-		getContentPane().setLayout(groupLayout);
+		getContentPane().setLayout(null);
+		getContentPane().add(cabecalho);
+		getContentPane().add(textArea);
+		getContentPane().add(alternativa4);
+		getContentPane().add(alternativa1);
+		getContentPane().add(alternativa3);
+		getContentPane().add(alternativa2);
+		getContentPane().add(opcao2);
+		getContentPane().add(opcao3);
+		getContentPane().add(opcao4);
+		getContentPane().add(opcao1);
+		getContentPane().add(btnNewButton);
 	}
 }

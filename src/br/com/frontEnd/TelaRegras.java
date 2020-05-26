@@ -48,34 +48,44 @@ public class TelaRegras extends JFrame {
 		setContentPane(contentPane);
 		
 		JLabel cabeçalho = new JLabel("SoccerQuiz");
+		cabeçalho.setBounds(124, 5, 184, 38);
 		cabeçalho.setFont(new Font("Showcard Gothic", Font.PLAIN, 30));
 		
 		JLabel lblComoJogar = new JLabel("Como Jogar");
+		lblComoJogar.setBounds(124, 49, 205, 38);
 		lblComoJogar.setFont(new Font("Times New Roman", Font.BOLD, 35));
 		
 		JLabel lblClique = new JLabel("1 - Clique em \"Iniciar\"");
+		lblClique.setBounds(15, 114, 404, 38);
 		lblClique.setFont(new Font("Times New Roman", Font.BOLD, 30));
 		
 		JLabel lblLeia = new JLabel("2 - Leia a pergunta");
+		lblLeia.setBounds(15, 158, 404, 38);
 		lblLeia.setFont(new Font("Times New Roman", Font.BOLD, 30));
 		
 		JLabel lblEscolha = new JLabel("3 - Escolha uma resposta");
+		lblEscolha.setBounds(15, 202, 404, 38);
 		lblEscolha.setFont(new Font("Times New Roman", Font.BOLD, 30));
 		
 		JLabel lblClique_1 = new JLabel("4 - Clique no bot\u00E3o \"Responder\"");
+		lblClique_1.setBounds(15, 246, 404, 38);
 		lblClique_1.setFont(new Font("Times New Roman", Font.BOLD, 28));
 		
 		JLabel lblSe = new JLabel("5 - Se acertar, passa de n\u00EDvel");
+		lblSe.setBounds(15, 290, 404, 38);
 		lblSe.setFont(new Font("Times New Roman", Font.BOLD, 30));
 		
 		JLabel lblDivirtase = new JLabel("Divirta-se");
+		lblDivirtase.setBounds(15, 359, 404, 38);
 		lblDivirtase.setHorizontalAlignment(SwingConstants.CENTER);
 		lblDivirtase.setFont(new Font("Times New Roman", Font.BOLD, 30));
 		
 		JLabel rodape = new JLabel("Desenvolvido por: Andr\u00E9 d'Lima / Pedro HSP");
+		rodape.setBounds(104, 443, 315, 15);
 		rodape.setFont(new Font("Times New Roman", Font.BOLD, 16));
 		
 		JButton btnVoltar = new JButton("Voltar");
+		btnVoltar.setBounds(15, 422, 71, 25);
 		btnVoltar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				TelaIntro telaIntro = new TelaIntro();
@@ -84,63 +94,16 @@ public class TelaRegras extends JFrame {
 			}
 		});
 		btnVoltar.setFont(new Font("Times New Roman", Font.BOLD, 14));
-		GroupLayout gl_contentPane = new GroupLayout(contentPane);
-		gl_contentPane.setHorizontalGroup(
-			gl_contentPane.createParallelGroup(Alignment.TRAILING)
-				.addGroup(gl_contentPane.createSequentialGroup()
-					.addGap(119)
-					.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
-						.addGroup(gl_contentPane.createSequentialGroup()
-							.addComponent(lblComoJogar, GroupLayout.PREFERRED_SIZE, 205, GroupLayout.PREFERRED_SIZE)
-							.addContainerGap())
-						.addGroup(gl_contentPane.createSequentialGroup()
-							.addComponent(cabeçalho, GroupLayout.DEFAULT_SIZE, 184, Short.MAX_VALUE)
-							.addGap(121))))
-				.addGroup(Alignment.LEADING, gl_contentPane.createSequentialGroup()
-					.addContainerGap()
-					.addComponent(btnVoltar)
-					.addGap(18)
-					.addComponent(rodape, GroupLayout.DEFAULT_SIZE, 315, Short.MAX_VALUE)
-					.addContainerGap())
-				.addGroup(gl_contentPane.createSequentialGroup()
-					.addContainerGap()
-					.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
-						.addComponent(lblClique, GroupLayout.DEFAULT_SIZE, 404, Short.MAX_VALUE)
-						.addComponent(lblLeia, GroupLayout.PREFERRED_SIZE, 404, GroupLayout.PREFERRED_SIZE)
-						.addComponent(lblEscolha, GroupLayout.PREFERRED_SIZE, 404, GroupLayout.PREFERRED_SIZE)
-						.addComponent(lblClique_1, GroupLayout.PREFERRED_SIZE, 404, GroupLayout.PREFERRED_SIZE)
-						.addComponent(lblSe, GroupLayout.PREFERRED_SIZE, 404, GroupLayout.PREFERRED_SIZE))
-					.addContainerGap())
-				.addGroup(gl_contentPane.createSequentialGroup()
-					.addContainerGap()
-					.addComponent(lblDivirtase, GroupLayout.PREFERRED_SIZE, 404, GroupLayout.PREFERRED_SIZE)
-					.addContainerGap(GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-		);
-		gl_contentPane.setVerticalGroup(
-			gl_contentPane.createParallelGroup(Alignment.LEADING)
-				.addGroup(gl_contentPane.createSequentialGroup()
-					.addComponent(cabeçalho, GroupLayout.DEFAULT_SIZE, 38, Short.MAX_VALUE)
-					.addPreferredGap(ComponentPlacement.RELATED)
-					.addComponent(lblComoJogar, GroupLayout.PREFERRED_SIZE, 38, GroupLayout.PREFERRED_SIZE)
-					.addGap(27)
-					.addComponent(lblClique, GroupLayout.PREFERRED_SIZE, 38, GroupLayout.PREFERRED_SIZE)
-					.addPreferredGap(ComponentPlacement.RELATED)
-					.addComponent(lblLeia, GroupLayout.PREFERRED_SIZE, 38, GroupLayout.PREFERRED_SIZE)
-					.addPreferredGap(ComponentPlacement.RELATED)
-					.addComponent(lblEscolha, GroupLayout.PREFERRED_SIZE, 38, GroupLayout.PREFERRED_SIZE)
-					.addPreferredGap(ComponentPlacement.RELATED)
-					.addComponent(lblClique_1, GroupLayout.PREFERRED_SIZE, 38, GroupLayout.PREFERRED_SIZE)
-					.addPreferredGap(ComponentPlacement.RELATED)
-					.addComponent(lblSe, GroupLayout.PREFERRED_SIZE, 38, GroupLayout.PREFERRED_SIZE)
-					.addGap(31)
-					.addComponent(lblDivirtase, GroupLayout.PREFERRED_SIZE, 38, GroupLayout.PREFERRED_SIZE)
-					.addGap(25)
-					.addGroup(gl_contentPane.createParallelGroup(Alignment.TRAILING)
-						.addGroup(gl_contentPane.createSequentialGroup()
-							.addComponent(btnVoltar)
-							.addContainerGap())
-						.addComponent(rodape, GroupLayout.PREFERRED_SIZE, 15, GroupLayout.PREFERRED_SIZE)))
-		);
-		contentPane.setLayout(gl_contentPane);
+		contentPane.setLayout(null);
+		contentPane.add(lblComoJogar);
+		contentPane.add(cabeçalho);
+		contentPane.add(btnVoltar);
+		contentPane.add(rodape);
+		contentPane.add(lblClique);
+		contentPane.add(lblLeia);
+		contentPane.add(lblEscolha);
+		contentPane.add(lblClique_1);
+		contentPane.add(lblSe);
+		contentPane.add(lblDivirtase);
 	}
 }
