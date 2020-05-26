@@ -87,9 +87,6 @@ public class TelaJogo extends JFrame {
 		}
 
 		);
-
-		JLabel rodape = new JLabel("Desenvolvido por: Andr\u00E9 d'Lima / Pedro HSP");
-		rodape.setFont(new Font("Times New Roman", Font.BOLD, 12));
 		
 		JTextArea textArea_Alternativa1 = new JTextArea();
 		textArea_Alternativa1.setBackground(new Color(204, 255, 255));
@@ -110,10 +107,6 @@ public class TelaJogo extends JFrame {
 					.addGap(129)
 					.addComponent(cabecalho, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
 					.addGap(121))
-				.addGroup(groupLayout.createSequentialGroup()
-					.addContainerGap(191, Short.MAX_VALUE)
-					.addComponent(rodape)
-					.addContainerGap())
 				.addGroup(groupLayout.createSequentialGroup()
 					.addGap(153)
 					.addComponent(btnNewButton)
@@ -141,7 +134,7 @@ public class TelaJogo extends JFrame {
 			groupLayout.createParallelGroup(Alignment.TRAILING)
 				.addGroup(groupLayout.createSequentialGroup()
 					.addContainerGap()
-					.addComponent(cabecalho, GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
+					.addComponent(cabecalho, GroupLayout.DEFAULT_SIZE, 40, Short.MAX_VALUE)
 					.addPreferredGap(ComponentPlacement.RELATED)
 					.addComponent(textArea, GroupLayout.PREFERRED_SIZE, 122, GroupLayout.PREFERRED_SIZE)
 					.addPreferredGap(ComponentPlacement.UNRELATED)
@@ -162,9 +155,7 @@ public class TelaJogo extends JFrame {
 						.addComponent(alternativa1, GroupLayout.PREFERRED_SIZE, 33, GroupLayout.PREFERRED_SIZE))
 					.addGap(34)
 					.addComponent(btnNewButton)
-					.addGap(44)
-					.addComponent(rodape)
-					.addContainerGap())
+					.addGap(70))
 		);
 		getContentPane().setLayout(groupLayout);
 	}

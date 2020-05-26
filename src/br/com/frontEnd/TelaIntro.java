@@ -25,9 +25,9 @@ public class TelaIntro extends JFrame {
 	/**
 	 * Launch the application.
 	 */
-	
+
 	public static void main(String[] args) {
-		
+
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
@@ -50,48 +50,61 @@ public class TelaIntro extends JFrame {
 		contentPane.setBackground(new Color(204, 255, 255));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
-		
+
 		JLabel cabeçalho = new JLabel("SoccerQuiz");
 		cabeçalho.setFont(new Font("Showcard Gothic", Font.PLAIN, 30));
-		
+
 		JLabel lblNewLabel = new JLabel(new ImageIcon(getClass().getResource("bola.png")));
-		
-		JButton btnNewButton = new JButton("Come\u00E7ar");
-		btnNewButton.setFont(new Font("Times New Roman", Font.BOLD, 14));
-		btnNewButton.addActionListener(new ActionListener() {
+
+		JButton btnIniciar = new JButton("Iniciar");
+		btnIniciar.setFont(new Font("Times New Roman", Font.BOLD, 14));
+		btnIniciar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				TelaJogo telaJogo = new TelaJogo();
 				telaJogo.setVisible(true);
 				setVisible(false);
-						
+
 			}
 		});
 		
+		JButton btnRegras = new JButton("Regras");
+		btnRegras.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				TelaRegras TelaRegras = new TelaRegras();
+				TelaRegras.setVisible(true);
+				setVisible(false);
+			}
+		});
+		btnRegras.setFont(new Font("Times New Roman", Font.BOLD, 14));
+
 		GroupLayout gl_contentPane = new GroupLayout(contentPane);
 		gl_contentPane.setHorizontalGroup(
-			gl_contentPane.createParallelGroup(Alignment.LEADING)
+			gl_contentPane.createParallelGroup(Alignment.TRAILING)
 				.addGroup(gl_contentPane.createSequentialGroup()
 					.addGap(121)
 					.addComponent(cabeçalho, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
 					.addGap(119))
-				.addComponent(lblNewLabel, GroupLayout.PREFERRED_SIZE, 424, Short.MAX_VALUE)
 				.addGroup(gl_contentPane.createSequentialGroup()
-					.addGap(161)
-					.addComponent(btnNewButton, GroupLayout.PREFERRED_SIZE, 103, GroupLayout.PREFERRED_SIZE)
-					.addContainerGap(160, Short.MAX_VALUE))
+					.addGap(31)
+					.addComponent(btnRegras, GroupLayout.PREFERRED_SIZE, 103, GroupLayout.PREFERRED_SIZE)
+					.addPreferredGap(ComponentPlacement.RELATED, 159, Short.MAX_VALUE)
+					.addComponent(btnIniciar, GroupLayout.PREFERRED_SIZE, 103, GroupLayout.PREFERRED_SIZE)
+					.addGap(28))
+				.addComponent(lblNewLabel, GroupLayout.PREFERRED_SIZE, 424, Short.MAX_VALUE)
 		);
 		gl_contentPane.setVerticalGroup(
 			gl_contentPane.createParallelGroup(Alignment.TRAILING)
 				.addGroup(gl_contentPane.createSequentialGroup()
-					.addComponent(cabeçalho, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+					.addComponent(cabeçalho, GroupLayout.DEFAULT_SIZE, 46, Short.MAX_VALUE)
 					.addPreferredGap(ComponentPlacement.RELATED)
-					.addComponent(lblNewLabel, GroupLayout.PREFERRED_SIZE, 356, GroupLayout.PREFERRED_SIZE)
-					.addPreferredGap(ComponentPlacement.RELATED)
-					.addComponent(btnNewButton, GroupLayout.PREFERRED_SIZE, 29, GroupLayout.PREFERRED_SIZE)
-					.addGap(16))
+					.addComponent(lblNewLabel, GroupLayout.PREFERRED_SIZE, 344, GroupLayout.PREFERRED_SIZE)
+					.addGap(15)
+					.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
+						.addComponent(btnIniciar, GroupLayout.PREFERRED_SIZE, 29, GroupLayout.PREFERRED_SIZE)
+						.addComponent(btnRegras, GroupLayout.PREFERRED_SIZE, 29, GroupLayout.PREFERRED_SIZE))
+					.addContainerGap())
 		);
 		contentPane.setLayout(gl_contentPane);
-		
-		
+
 	}
 }
