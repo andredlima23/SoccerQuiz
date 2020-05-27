@@ -48,7 +48,7 @@ public class TelaRegras extends JFrame {
 		setContentPane(contentPane);
 		
 		JLabel cabeçalho = new JLabel("SoccerQuiz");
-		cabeçalho.setBounds(124, 5, 184, 38);
+		cabeçalho.setBounds(126, 5, 184, 46);
 		cabeçalho.setFont(new Font("Showcard Gothic", Font.PLAIN, 30));
 		
 		JLabel lblComoJogar = new JLabel("Como Jogar");
@@ -85,7 +85,7 @@ public class TelaRegras extends JFrame {
 		rodape.setFont(new Font("Times New Roman", Font.BOLD, 16));
 		
 		JButton btnVoltar = new JButton("Voltar");
-		btnVoltar.setBounds(15, 422, 71, 25);
+		btnVoltar.setBounds(15, 422, 75, 29);
 		btnVoltar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				TelaIntro telaIntro = new TelaIntro();
