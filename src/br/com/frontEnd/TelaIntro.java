@@ -5,6 +5,7 @@ import java.awt.EventQueue;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.File;
 
 import javax.swing.GroupLayout;
 import javax.swing.GroupLayout.Alignment;
@@ -32,6 +33,7 @@ public class TelaIntro extends JFrame {
 					TelaIntro frame = new TelaIntro();
 					frame.setVisible(true);
 					MatrixQuestion.preencherTabela();
+					
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -58,9 +60,7 @@ public class TelaIntro extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				TelaJogo telaJogo = new TelaJogo();
 				telaJogo.setVisible(true);
-				
 				setVisible(false);
-
 			}
 		});
 		
