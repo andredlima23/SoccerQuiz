@@ -1,30 +1,26 @@
 package br.com.frontEnd;
 
-import java.awt.BorderLayout;
+import java.awt.Color;
 import java.awt.EventQueue;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.io.File;
+import java.util.ArrayList;
 
-import javax.swing.GroupLayout;
-import javax.swing.GroupLayout.Alignment;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
-import javax.swing.LayoutStyle.ComponentPlacement;
 import javax.swing.border.EmptyBorder;
 
+import br.com.backEnd.Algoritmos;
 import br.com.database.MatrixQuestion;
-
-import java.awt.Color;
 
 public class TelaIntro extends JFrame {
 
 	private JPanel contentPane;
-
+	
 	public static void main(String[] args) {
 
 		EventQueue.invokeLater(new Runnable() {
@@ -32,6 +28,9 @@ public class TelaIntro extends JFrame {
 				try {
 					TelaIntro frame = new TelaIntro();
 					frame.setVisible(true);
+					
+					Algoritmos.questoesSorteadas = new ArrayList();
+					Algoritmos.nivel = 0;
 					MatrixQuestion.preencherTabela();
 					
 				} catch (Exception e) {
