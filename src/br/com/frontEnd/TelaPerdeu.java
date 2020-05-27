@@ -1,43 +1,26 @@
 package br.com.frontEnd;
 
-import java.awt.BorderLayout;
-import java.awt.EventQueue;
-
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.border.EmptyBorder;
-import javax.swing.JLabel;
-import java.awt.Font;
 import java.awt.Color;
+import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
-import java.awt.event.ActionListener;
-import java.awt.event.ActionEvent;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+
+import br.com.backEnd.Algoritmos;
 
 public class TelaPerdeu extends JFrame {
 
+	private static final long serialVersionUID = 1L;
+	
 	private JPanel contentPane;
 	private final JLabel lblTenteOutraVez = new JLabel("Tente Outra Vez");
 
-	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					TelaPerdeu frame = new TelaPerdeu();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
-
-	/**
-	 * Create the frame.
-	 */
 	public TelaPerdeu() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 500);
@@ -68,6 +51,7 @@ public class TelaPerdeu extends JFrame {
 				TelaIntro telaIntro = new TelaIntro();
 				telaIntro.setVisible(true);
 				setVisible(false);
+				Algoritmos.nivel=0;
 			}
 		});
 		btnInicio.setFont(new Font("Times New Roman", Font.BOLD, 14));

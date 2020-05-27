@@ -9,6 +9,7 @@ import javax.swing.ButtonGroup;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JRadioButton;
 import javax.swing.JTextArea;
 import javax.swing.SwingConstants;
@@ -19,20 +20,10 @@ import br.com.frontEnd.TelaMensagem;
 
 public class TelaJogo extends JFrame {
 
+	private static final long serialVersionUID = 1L;
+
 	JTextArea textArea = new JTextArea();
 	Question question = new Question();
-//	public static void main(String[] args) {
-//		EventQueue.invokeLater(new Runnable() {
-//			public void run() {
-//				try {
-//					TelaJogo frame = new TelaJogo();
-//					frame.setVisible(true);
-//				} catch (Exception e) {
-//					e.printStackTrace();
-//				}
-//			}
-//		});
-//	}
 
 	public TelaJogo() {
 		textArea.setWrapStyleWord(true);
@@ -51,7 +42,7 @@ public class TelaJogo extends JFrame {
 		cabecalho.setBounds(126, 5, 184, 46);
 		cabecalho.setHorizontalAlignment(SwingConstants.CENTER);
 		cabecalho.setFont(new Font("Showcard Gothic", Font.PLAIN, 30));
-		
+
 		JRadioButton alternativa1 = new JRadioButton();
 		alternativa1.setBounds(10, 235, 21, 21);
 		alternativa1.setBackground(new Color(204, 255, 255));
@@ -84,19 +75,19 @@ public class TelaJogo extends JFrame {
 		opcao1.setFont(new Font("Times New Roman", Font.BOLD, 16));
 		opcao1.setBounds(33, 235, 375, 22);
 		opcao1.setBackground(new Color(204, 255, 255));
-		
+
 		JTextArea opcao2 = new JTextArea();
 		opcao2.setEditable(false);
 		opcao2.setFont(new Font("Times New Roman", Font.BOLD, 16));
 		opcao2.setBounds(33, 271, 375, 22);
 		opcao2.setBackground(new Color(204, 255, 255));
-		
+
 		JTextArea opcao3 = new JTextArea();
 		opcao3.setEditable(false);
 		opcao3.setFont(new Font("Times New Roman", Font.BOLD, 16));
 		opcao3.setBounds(33, 307, 375, 22);
 		opcao3.setBackground(new Color(204, 255, 255));
-		
+
 		JTextArea opcao4 = new JTextArea();
 		opcao4.setEditable(false);
 		opcao4.setFont(new Font("Times New Roman", Font.BOLD, 16));
@@ -104,24 +95,37 @@ public class TelaJogo extends JFrame {
 		opcao4.setBackground(new Color(204, 255, 255));
 
 		int posicaoRespostaCorreta = Algoritmos.atualizarQuestao(question, textArea, opcao1, opcao2, opcao3, opcao4);
-		
+
 		JButton btnNewButton = new JButton("Responder");
 		btnNewButton.setBounds(153, 395, 150, 30);
 		btnNewButton.setFont(new Font("Times New Roman", Font.BOLD, 18));
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				TelaMensagem telaMensagem;
-				TelaPerdeu telaPerdeu;
-				
-				if(Algoritmos.verificarResposta(alternativa1, alternativa2, alternativa3, alternativa4) == posicaoRespostaCorreta) {
-					telaMensagem = new TelaMensagem();
-					telaMensagem.setVisible(true);
-					setVisible(false);
-				}
-				else {
-					telaPerdeu = new TelaPerdeu();
-					telaPerdeu.setVisible(true);
-					setVisible(false);
+
+				if (alternativa1.isSelected() || alternativa2.isSelected() || alternativa3.isSelected()
+						|| alternativa4.isSelected()) {
+					TelaMensagem telaMensagem;
+					TelaPerdeu telaPerdeu;
+					TelaZerou telaZerou;
+
+					if (Algoritmos.verificarResposta(alternativa1, alternativa2, alternativa3,
+							alternativa4) == posicaoRespostaCorreta) {
+						if (Algoritmos.nivel < 10) {
+							telaMensagem = new TelaMensagem();
+							telaMensagem.setVisible(true);
+							setVisible(false);
+						} else {
+							telaZerou = new TelaZerou();
+							telaZerou.setVisible(true);
+							setVisible(false);
+						}
+					} else {
+						telaPerdeu = new TelaPerdeu();
+						telaPerdeu.setVisible(true);
+						setVisible(false);
+					}
+				} else {
+						JOptionPane.showMessageDialog(null, "Escolha uma alternativa!");
 				}
 			}
 		});
