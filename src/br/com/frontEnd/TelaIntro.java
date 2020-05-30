@@ -19,6 +19,7 @@ import br.com.database.MatrixQuestion;
 
 public class TelaIntro extends JFrame {
 
+	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
 	
 	public static void main(String[] args) {
@@ -29,7 +30,7 @@ public class TelaIntro extends JFrame {
 					TelaIntro frame = new TelaIntro();
 					frame.setVisible(true);
 					
-					Algoritmos.questoesSorteadas = new ArrayList();
+					Algoritmos.questoesSorteadas = new ArrayList<Integer>();
 					Algoritmos.nivel = 0;
 					MatrixQuestion.preencherTabela();
 					

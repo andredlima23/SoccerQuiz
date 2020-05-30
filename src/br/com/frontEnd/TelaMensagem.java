@@ -1,7 +1,6 @@
 package br.com.frontEnd;
 
 import java.awt.Color;
-import java.awt.EventQueue;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -16,28 +15,10 @@ import javax.swing.border.EmptyBorder;
 import br.com.backEnd.Algoritmos;
 
 public class TelaMensagem extends JFrame {
-
+	
+	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
 
-	/**
-	 * Launch the application.
-	 */
-//	public static void main(String[] args) {
-//		EventQueue.invokeLater(new Runnable() {
-//			public void run() {
-//				try {
-//					TelaMensagem frame = new TelaMensagem();
-//					frame.setVisible(true);
-//				} catch (Exception e) {
-//					e.printStackTrace();
-//				}
-//			}
-//		});
-//	}
-
-	/**
-	 * Create the frame.
-	 */
 	public TelaMensagem() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 500);
@@ -62,7 +43,7 @@ public class TelaMensagem extends JFrame {
 		lblNewLabel.setBounds(5, 150, 424, 240);
 		contentPane.add(lblNewLabel);
 		
-		JButton btnContinuar = new JButton("Continuar");
+		JButton btnContinuar = new JButton("Próximo nível: " + (Algoritmos.nivel + 1));
 		btnContinuar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				TelaJogo telaJogo = new TelaJogo();
@@ -72,7 +53,7 @@ public class TelaMensagem extends JFrame {
 			}
 		});
 		btnContinuar.setFont(new Font("Times New Roman", Font.BOLD, 14));
-		btnContinuar.setBounds(162, 421, 103, 29);
+		btnContinuar.setBounds(150, 421, 150, 29);
 		contentPane.add(btnContinuar);
 		
 		

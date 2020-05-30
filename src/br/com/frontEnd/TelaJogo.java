@@ -127,6 +127,7 @@ public class TelaJogo extends JFrame {
 				} else {
 						JOptionPane.showMessageDialog(null, "Escolha uma alternativa!");
 				}
+				
 			}
 		});
 

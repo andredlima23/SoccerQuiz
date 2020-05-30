@@ -9,7 +9,7 @@ public class MatrixQuestion {
 
 	public static void preencherTabela() {
 		//Início nível fácil
-		tabela[0][0] = "Qual a única seleção cinco vezes campeã da copa do mundo da FIFA?";
+		tabela[0][0] = "Qual é a única seleção cinco vezes campeã da copa do mundo da FIFA?";
 		tabela[0][1] = "Brasil";
 		tabela[0][2] = "Alemanha";
 		tabela[0][3] = "Itália";
@@ -49,7 +49,7 @@ public class MatrixQuestion {
 		tabela[7][2] = "Felipão";
 		tabela[7][3] = "Dunga";
 		tabela[7][4] = "Parreira";
-		tabela[8][0] = "Como se chama o principal torneio nacional de clubes do Brasil?";
+		tabela[8][0] = "Como se chama o principal torneio de clubes do Brasil?";
 		tabela[8][1] = "Brasileirão Série A";
 		tabela[8][2] = "Copa do Brasil";
 		tabela[8][3] = "Campeonato Pernambucano";
@@ -61,11 +61,11 @@ public class MatrixQuestion {
 		tabela[9][2] = "Ronaldo";
 		tabela[9][3] = "Rivaldo";
 		tabela[9][4] = "Lúcio";
-		tabela[10][0] = "Qual é o mascote da seleção brasileira de futebol?";
-		tabela[10][1] = "Canarinho";
-		tabela[10][2] = "Fuleco";
-		tabela[10][3] = "Zé Carioca";
-		tabela[10][4] = "Louro José";
+		tabela[10][0] = "Qual país sediou a Copa do Mundo FIFA 2010?";
+		tabela[10][1] = "África do Sul";
+		tabela[10][2] = "Coréia do Sul e Japão";
+		tabela[10][3] = "Alemanha";
+		tabela[10][4] = "Brasil";
 		tabela[11][0] = "Em quais anos o Brasil sediou a copa do mundo da FIFA?";
 		tabela[11][1] = "1950 e 2014";
 		tabela[11][2] = "1956 e 2016";
@@ -86,27 +86,27 @@ public class MatrixQuestion {
 		tabela[14][2] = "Flamengo e River Plate";
 		tabela[14][3] = "Liverpool e Tottenham";
 		tabela[14][4] = "Liverpool e River Plate";
-		tabela[15][0] = "Quais foram os finalistas do UEFA Champions League de 2018/2019";
+		tabela[15][0] = "Quais foram os finalistas da UEFA Champions League de 2018/2019";
 		tabela[15][1] = "Liverpool e Tottenham";
 		tabela[15][2] = "Liverpool e Ajax";
 		tabela[15][3] = "Barcelona e Tottenham";
 		tabela[15][4] = "Liverpool e Barcelona";
-		tabela[16][0] = "Quais foram os finalistas da Copa do Mundo FIFA 2018?";
+		tabela[16][0] = "Quais foram os finalistas da Copa do Mundo FIFA de 2018?";
 		tabela[16][1] = "França e Croácia";
 		tabela[16][2] = "França e Inglaterra";
 		tabela[16][3] = "Bélgica e Croácia";
 		tabela[16][4] = "Brasil e Inglaterra";
-		tabela[17][0] = "Quais foram os finalistas da Copa do Mundo FIFA 2014?";
+		tabela[17][0] = "Quais foram os finalistas da Copa do Mundo FIFA de 2014?";
 		tabela[17][1] = "Alemanha e Argentina";
 		tabela[17][2] = "Alemanha e Brasil";
 		tabela[17][3] = "Brasil e Argentina";
 		tabela[17][4] = "Holanda e Alemanha";
-		tabela[18][0] = "Qual país sediou a Copa do Mundo FIFA 2018?";
+		tabela[18][0] = "Qual país sediou a Copa do Mundo FIFA de 2018?";
 		tabela[18][1] = "Rússia";
 		tabela[18][2] = "África do Sul";
 		tabela[18][3] = "Brasil";
 		tabela[18][4] = "França";
-		tabela[19][0] = "Qual será o país sede da Copa do Mundo FIFA 2022?";
+		tabela[19][0] = "Qual será o país sede da Copa do Mundo FIFA de 2022?";
 		tabela[19][1] = "Catar";
 		tabela[19][2] = "Argentina";
 		tabela[19][3] = "Arábia Saudita";
@@ -118,16 +118,16 @@ public class MatrixQuestion {
 		tabela[20][4] = "França";
 		//Fim nível médio
 		//Início nível difícil
-		tabela[21][0] = "Quem vestia as camisas '9, 10 e 11' no último título do Brasil em copas do mundo?";
+		tabela[21][0] = "Quais jogadores vestiam as camisas '9, 10 e 11' no último título do Brasil em copas do mundo?";
 		tabela[21][1] = "Ronaldo, Rivaldo e Ronaldinho Gaúcho";
 		tabela[21][2] = "Ronaldo, Kaká e Rivaldo";
 		tabela[21][3] = "Ronaldinho Gaúcho, Rivaldo e Denílson";
 		tabela[21][4] = "Rivaldo, Roberto Carlos e Cafú";
-		tabela[22][0] = "Quais seleções podem se igualar ao Brasil em títulos mundiais?";
-		tabela[22][1] = "Alemanha e Itália";
-		tabela[22][2] = "Alemanha e França";
-		tabela[22][3] = "Itália e França";
-		tabela[22][4] = "Argentina e França";
+		tabela[22][0] = "Qual foi o placar da final da Copa das Confederações FIFA de 2009?";
+		tabela[22][1] = "Brasil 3 x 2 Estados Unidos";
+		tabela[22][2] = "Alemanha 7 x 1 Brasil";
+		tabela[22][3] = "Argentina 1 x 4 Brasil";
+		tabela[22][4] = "Brasil 3 x 0 Espanha";
 		tabela[23][0] = "Quem foi o artilheiro da edição da Uefa Champions League 18/19?";
 		tabela[23][1] = "Messi";
 		tabela[23][2] = "Cristiano Ronaldo";
@@ -143,11 +143,11 @@ public class MatrixQuestion {
 		tabela[25][2] = "Lukaku";
 		tabela[25][3] = "Mbappé";
 		tabela[25][4] = "Cristiano Ronaldo";
-		tabela[26][0] = "Quem foi o artilheiro da Copa do Mundo FIFA 2002?";
-		tabela[26][1] = "Ronaldo";
-		tabela[26][2] = "Rivaldo";
-		tabela[26][3] = "Vieri";
-		tabela[26][4] = "Klose";
+		tabela[26][0] = "Quem foi o artilheiro da Copa do Mundo FIFA 1998?";
+		tabela[26][1] = "Suker";
+		tabela[26][2] = "Ronaldo";
+		tabela[26][3] = "Batistuta";
+		tabela[26][4] = "Baggio";
 		//Fim nível difícil
 		//Início nível pro
 		tabela[27][0] = "Quais foram os anos das maiores goleadas da Uefa Champions League?";
